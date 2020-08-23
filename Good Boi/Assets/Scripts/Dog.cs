@@ -46,7 +46,7 @@ public class Dog : MonoBehaviour
         }
     }
 
-    private Vector3 GetPosition(){
+    public Vector3 GetPosition(){
         return transform.position + spriteOffset;
     }
 
@@ -70,6 +70,10 @@ public class Dog : MonoBehaviour
             {
                 collider.GetComponentInParent<Farmer>().Interact(this);
                 return;
+            }
+            else if(collider.tag == "Chicken")
+            {
+                collider.GetComponentInParent<Chicken>().GetScared(this);
             }
         }
     }
