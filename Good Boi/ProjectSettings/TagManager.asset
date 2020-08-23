@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Farmer
   - Chicken
+  - Stick
   layers:
   - Default
   - TransparentFX

@@ -75,6 +75,10 @@ public class Dog : MonoBehaviour
             {
                 collider.GetComponentInParent<Chicken>().GetScared(this);
             }
+            else if(collider.tag == "Stick")
+            {
+                collider.GetComponentInParent<Stick>().Interact();
+            }
         }
     }
 
